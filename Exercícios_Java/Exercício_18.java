@@ -16,22 +16,23 @@ public class Exercício_18 {
     public static void main(String args[]) {
         Scanner Dados = new Scanner(System.in);
         
-        System.out.println("Informe seu sexo:\nMasculino = M\nFeminino = F");
+        System.out.println("Informe seu sexo:\nMasculino\nFeminino");
         String Sexo = Dados.nextLine();
         
-        System.out.println("Informe, em metros, a sua altura:");
-        float Altura = Dados.nextInt();
+        System.out.println("Informe, em centímetros, a sua altura:");
+        int Altura = Dados.nextInt();
         
         System.out.println("Informe seu nome:");
         String Nome = Dados.nextLine();
         
-        if (Sexo == "M" || Sexo == "m"){
-            float Peso_Ideal =(72.7f * Altura)-58;
-            System.out.println("O seu peso ideal é :"+ Peso_Ideal);
+        float Altura_Metros = Altura/100;
+        if (Sexo == "Masculino" || Sexo == "masculino"){
+            float Peso_Ideal =(72.7f * Altura_Metros)-58;
+            System.out.println(Nome +" o seu peso ideal é :"+ Peso_Ideal);
         }
         else{
-            float Peso_Ideal = (62.1f * Altura)-44.7f;
-            System.out.println("O seu peso ideal é :"+ Peso_Ideal);
+            float Peso_Ideal = (62.1f * Altura_Metros)-44.7f;
+            System.out.println(Nome+" o seu peso ideal é :"+ Peso_Ideal);
         }
 
         // TODO code application logic here
