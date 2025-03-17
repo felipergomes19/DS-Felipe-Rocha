@@ -8,7 +8,7 @@
  * @author felip
  */
 import java.util.Scanner;
-public class Exercício_12 {
+public class Exercício_13 {
 
     /**
      * @param args the command line arguments
