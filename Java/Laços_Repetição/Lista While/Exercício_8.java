@@ -30,17 +30,18 @@ public class Exercício_8 {
                 int j = 0;
                 while(j < Lados)
                 {
-                    j++;
-                    if(i == 0|| i == Lados - 1|| j == 0 || j == Lados)
+                    if(i == 0|| i == Lados - 1|| j == 0 || j == Lados - 1)
                     {
-                        System.out.println(" * ");
+                        System.out.print("* ");
                     }
                     else
                     {
-                       System.out.println("  ");
+                       System.out.print("  ");
                     } 
-                    
+                    j++;
                 }
+                System.out.println();
+                i++;
             }
         }
 

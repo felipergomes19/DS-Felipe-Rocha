@@ -5,24 +5,18 @@
 
 /**
  *
- * @author CAMARGO
+ * @author felip
  */
-import java.util.Scanner;
-public class Exercício_1{
+public class Exercício_12 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-         Scanner Entrada = new Scanner (System.in);
-         System.out.println("Digite um numero:");
-         int numero = Entrada.nextInt();
-         
-         for(int i = 0; i <= numero ; i++)
-         {
-             System.out.println("O seu numero e:"+i);
-             
-         }
         // TODO code application logic here
+        for(int i = 1; i<=10; i++){
+            int Produto = i*8;
+            System.out.println(i+" X 8:"+Produto);
+        }
     }
 }
