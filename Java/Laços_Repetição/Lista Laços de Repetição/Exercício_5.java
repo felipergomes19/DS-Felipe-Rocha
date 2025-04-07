@@ -26,7 +26,6 @@ public class Exercício_5 {
             {
                 System.out.println("VALOR INSERIDO INVALIDO");
                 i--;
-                continue;
             }
             else
             {
