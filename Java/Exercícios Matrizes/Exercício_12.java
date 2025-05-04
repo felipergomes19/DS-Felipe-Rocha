@@ -5,10 +5,10 @@
 
 /**
  *
- * @author CAMARGO
+ * @author felip
  */
 import java.util.Scanner;
-public class Exercício_9 {
+public class Exercício_12 {
 
     /**
      * @param args the command line arguments
@@ -17,23 +17,26 @@ public class Exercício_9 {
         // TODO code application logic here
         Scanner Entrada = new Scanner(System.in);
         int[] Numeros = new int[10];
+        int Soma = 0;
+        int Quantidade_Maior_Que_Media = 0;
         
-        System.out.println("Insira os numeros:");
+        System.out.println("Insira os numeros no vetor:");
+        
         for(int i = 0; i < Numeros.length; i++)
         {
             Numeros[i] = Entrada.nextInt();
+            Soma+=Numeros[i];
         }
+        float Media = Soma/Numeros.length;
         
-        System.out.println("------------------");
-        System.out.println("Insira o numero que voce deseja usar de comparacao:");
-        float Numero_Escolhido = Entrada.nextFloat();
-       
         for(int i = 0; i < Numeros.length; i++)
         {
-            if(Numeros[i] > Numero_Escolhido)
+            if(Numeros[i] > Media)
             {
-                System.out.println(Numeros[i]);
+                Quantidade_Maior_Que_Media +=1;
             }
         }
+        System.out.println(Media);
+        System.out.println(Quantidade_Maior_Que_Media+" numeros inseridos sao maior que a media total");
     }
 }

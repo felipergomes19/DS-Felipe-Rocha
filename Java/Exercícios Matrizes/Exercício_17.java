@@ -5,10 +5,10 @@
 
 /**
  *
- * @author CAMARGO
+ * @author felip
  */
 import java.util.Scanner;
-public class Exercício_9 {
+public class Exercício_17 {
 
     /**
      * @param args the command line arguments
@@ -16,24 +16,30 @@ public class Exercício_9 {
     public static void main(String args[]) {
         // TODO code application logic here
         Scanner Entrada = new Scanner(System.in);
-        int[] Numeros = new int[10];
+        int[] Numeros = new int[20];
+        System.out.println("Insira os numeros no vetor:");
         
-        System.out.println("Insira os numeros:");
         for(int i = 0; i < Numeros.length; i++)
         {
             Numeros[i] = Entrada.nextInt();
         }
         
-        System.out.println("------------------");
-        System.out.println("Insira o numero que voce deseja usar de comparacao:");
-        float Numero_Escolhido = Entrada.nextFloat();
-       
-        for(int i = 0; i < Numeros.length; i++)
+        
+        System.out.println("------------------\nVetor ordenado");
+        
+        for(int i = 0; i < Numeros.length - 1 ; i++ )
         {
-            if(Numeros[i] > Numero_Escolhido)
+            for(int j = 0; j < Numeros.length - i - 1; j++)
             {
-                System.out.println(Numeros[i]);
+                int temp = Numeros[j];
+                Numeros[j] = Numeros[j+1];
+                Numeros[j+1] = temp;
             }
         }
+        
+         for (int num : vetor) {
+            System.out.print(num + " ");
+        }
+
     }
 }

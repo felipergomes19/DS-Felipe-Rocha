@@ -5,10 +5,10 @@
 
 /**
  *
- * @author CAMARGO
+ * @author felip
  */
 import java.util.Scanner;
-public class Exercício_9 {
+public class Exercício_10 {
 
     /**
      * @param args the command line arguments
@@ -16,23 +16,25 @@ public class Exercício_9 {
     public static void main(String args[]) {
         // TODO code application logic here
         Scanner Entrada = new Scanner(System.in);
-        int[] Numeros = new int[10];
-        
         System.out.println("Insira os numeros:");
+        
+        int[] Numeros = new int[10];
         for(int i = 0; i < Numeros.length; i++)
         {
             Numeros[i] = Entrada.nextInt();
         }
         
-        System.out.println("------------------");
-        System.out.println("Insira o numero que voce deseja usar de comparacao:");
-        float Numero_Escolhido = Entrada.nextFloat();
-       
+        System.out.println("-----------------------------");
+        
         for(int i = 0; i < Numeros.length; i++)
         {
-            if(Numeros[i] > Numero_Escolhido)
+            if(Numeros[i] < 0)
             {
+                Numeros[i] = 0;
                 System.out.println(Numeros[i]);
+            }
+            else{
+            System.out.println(Numeros[i]);
             }
         }
     }

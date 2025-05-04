@@ -5,10 +5,11 @@
 
 /**
  *
- * @author CAMARGO
+ * @author felip
  */
 import java.util.Scanner;
-public class Exercício_9 {
+import java.util.Arrays;
+public class Exercício_22 {
 
     /**
      * @param args the command line arguments
@@ -18,22 +19,24 @@ public class Exercício_9 {
         Scanner Entrada = new Scanner(System.in);
         int[] Numeros = new int[10];
         
-        System.out.println("Insira os numeros:");
+        System.out.println("Insira os numeros no vetor:");
         for(int i = 0; i < Numeros.length; i++)
         {
             Numeros[i] = Entrada.nextInt();
         }
         
-        System.out.println("------------------");
-        System.out.println("Insira o numero que voce deseja usar de comparacao:");
-        float Numero_Escolhido = Entrada.nextFloat();
-       
-        for(int i = 0; i < Numeros.length; i++)
+        Arrays.sort(Numeros);
+        
+        double Mediana;
+        int Meio1 = Numeros.length/2 - 1;
+        int Meio2 = Numeros.length/2;
+        Mediana = (Numeros[Meio1] + Numeros[Meio2])/2;
+        
+        System.out.print("Vetor ordenado:");
+        for(int num : Numeros)
         {
-            if(Numeros[i] > Numero_Escolhido)
-            {
-                System.out.println(Numeros[i]);
-            }
+            System.out.print(num+" ");
         }
+        System.out.println("\nA mediana desse vetor e o numero: "+Mediana);
     }
 }

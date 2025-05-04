@@ -5,10 +5,10 @@
 
 /**
  *
- * @author CAMARGO
+ * @author felip
  */
 import java.util.Scanner;
-public class Exercício_9 {
+public class Exercício_15 {
 
     /**
      * @param args the command line arguments
@@ -18,19 +18,18 @@ public class Exercício_9 {
         Scanner Entrada = new Scanner(System.in);
         int[] Numeros = new int[10];
         
-        System.out.println("Insira os numeros:");
+        System.out.println("Insira os numeros no vetor:");
+        
         for(int i = 0; i < Numeros.length; i++)
         {
             Numeros[i] = Entrada.nextInt();
         }
         
-        System.out.println("------------------");
-        System.out.println("Insira o numero que voce deseja usar de comparacao:");
-        float Numero_Escolhido = Entrada.nextFloat();
-       
-        for(int i = 0; i < Numeros.length; i++)
+        System.out.println("-----------------\nNumeros em posicoes impares:");
+        
+        for(int i  = 0; i < Numeros.length; i++)
         {
-            if(Numeros[i] > Numero_Escolhido)
+            if(i%2 != 0)
             {
                 System.out.println(Numeros[i]);
             }
