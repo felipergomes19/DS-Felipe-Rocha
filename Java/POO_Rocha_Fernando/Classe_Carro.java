@@ -3,15 +3,16 @@
 class Carro extends Veiculo{
     
         // Atributos privados específicos da subclasse
-    private int portas;
-    private int rodas;
-    private String cor;
+    public int portas;
+    public int rodas;
+    
     
         // Construtor da classe Carro
     public Carro(String marca,String modelo, int ano, int portas, int rodas, String cor){
         
         // Usando o super para chamar o construtor da superclasse
-        super(marca, modelo, ano);
+        super(marca, modelo, ano,cor);
+       
        
     }
     // Getters e Setters
@@ -31,13 +32,7 @@ class Carro extends Veiculo{
         this.rodas = rodas;
     }
 
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
+    
              // Sobrescrevendo o método da superclasse para adicionar mais informações
         public void ExibirInformacao(){
             
@@ -45,10 +40,8 @@ class Carro extends Veiculo{
             super.ExibirInformacao();
             System.out.println("Numero de portas = "+portas);
             System.out.println("Numero de rodas = "+rodas);
-            System.out.println("Cor = "+cor);
+           
         } 
 
-        public void Acelerar(){
-            
-        }
+       
 }

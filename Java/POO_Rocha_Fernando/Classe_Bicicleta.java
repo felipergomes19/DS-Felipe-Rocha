@@ -1,12 +1,11 @@
-class Moto extends Veiculo{
+class Bicicleta extends Veiculo{
     
     //Atributos específicos da subclasse
     public int rodas;
-    public String cor;
     public String tipo;
-  
+    public String Tipo_Guidao;
 
-    public Moto(String marca,String modelo, int ano, int rodas, String cor,String tipo){
+    public bicicleta(String marca,String modelo, int ano, int rodas, String Tipo_Guidao,String tipo){
         super(marca,modelo,ano);
 
 }
@@ -20,13 +19,7 @@ class Moto extends Veiculo{
         this.rodas = rodas;
     };
 
-    public String getCor() {
-        return cor;
-    };
-
-    public void setCor(String cor) {
-        this.cor = cor; 
-    };
+    
     public String getTipo() {
         return tipo;
     };
@@ -41,6 +34,6 @@ class Moto extends Veiculo{
             super.ExibirInformacao();
             System.out.println("Numero de portas = "+tipo);
             System.out.println("Numero de rodas = "+rodas);
-            System.out.println("Cor = "+cor);
+            
         } 
 }
