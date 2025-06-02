@@ -5,7 +5,7 @@ class Bicicleta extends Veiculo{
     public String tipo;
     public String Tipo_Guidao;
 
-    public bicicleta(String marca,String modelo, int ano, int rodas, String Tipo_Guidao,String tipo){
+    public Bicicleta(String marca,String modelo, int ano, int rodas, String Tipo_Guidao,String tipo){
         super(marca,modelo,ano);
 
 }

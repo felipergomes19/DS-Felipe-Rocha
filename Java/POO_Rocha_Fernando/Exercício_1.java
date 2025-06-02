@@ -128,10 +128,10 @@ public class Exercício_1
 
                         Entrada.nextLine(); // Limpar o buffer
 
-                        System.out.println("Insira a cor da sua bicicleta:");
-                        String cor = Entrada.nextLine();
+                        System.out.println("Insira o tipo de guidao da sua bicicleta:");
+                        String Tipo_Guidao = Entrada.nextLine();
                         
-                    Bicicleta Nova_Bicicleta = new Bicicleta(marca, modelo, ano, tipo, rodas, cor);
+                   Bicicleta Nova_Bicicleta = new Bicicleta(marca, modelo, ano, tipo, rodas, Tipo_Guidao);
 
                 // Chamando o metodo da classe Carro
             
@@ -140,7 +140,7 @@ public class Exercício_1
             do{
             System.out.println("------------Escolha uma opção------------------");
             System.out.println("1)Ligar\n2)Desligar\n3)Acelerar\n4)Freiar\n5)Exibir informações");
-            
+            Escolha = Entrada.nextInt();
                     }
             while(Escolha !=0);
             }

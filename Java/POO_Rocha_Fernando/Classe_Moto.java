@@ -1,16 +1,14 @@
-class Moto extends Veiculo{
+ class Moto extends Veiculo{
     
     //Atributos específicos da subclasse
     public int rodas;
-    public String cor;
     public String tipo;
-  
+
 
     public Moto(String marca,String modelo, int ano, int rodas, String cor,String tipo){
-        super(marca,modelo,ano);
+        super(marca,modelo,ano,cor);
 
 }
-    
 
     public int getRodas() {
         return rodas;
@@ -19,14 +17,7 @@ class Moto extends Veiculo{
     public void setRodas(int rodas) {
         this.rodas = rodas;
     };
-
-    public String getCor() {
-        return cor;
-    };
-
-    public void setCor(String cor) {
-        this.cor = cor; 
-    };
+ 
     public String getTipo() {
         return tipo;
     };
@@ -35,12 +26,13 @@ class Moto extends Veiculo{
         this.tipo = tipo;
     };
     
-    public void ExibirInformacao(){
+    public void ExibirInformacaoMoto(){
             
             // Chama o método da superclasse
-            super.ExibirInformacao();
-            System.out.println("Numero de portas = "+tipo);
-            System.out.println("Numero de rodas = "+rodas);
-            System.out.println("Cor = "+cor);
+            
+            
+            System.out.println("Tipo da moto = " + tipo);
+            System.out.println("Número de rodas = " + rodas);
+            System.out.println("Cor = " + cor);
         } 
 }

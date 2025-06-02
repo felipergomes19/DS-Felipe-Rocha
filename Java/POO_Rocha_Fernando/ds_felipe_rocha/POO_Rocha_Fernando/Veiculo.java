@@ -1,11 +1,25 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
-    // Superclasee
-class Veiculo{
+/**
+ *
+ * @author CAMARGO
+ */
+package ds_felipe_rocha;
+public class Veiculo {
         // Atributos privados (encapsulados)
     private String marca;
     private String modelo;
     private int ano; 
     public String cor;
+    
+      // Atributos adicionais
+    private int Velocidade = 0;
+    private int Quilometragem = 0;
+    private int Combustivel_Restante = 100;
+    private String Estado = "Desligado"; // Estado do carro
     
         // Construtor da classe Veiculo
     public Veiculo(String marca,String modelo, int ano,String cor){
@@ -15,37 +29,39 @@ class Veiculo{
         this.cor = cor;
 }
      // Métodos Setters
-     public String setMarca(){
+public String getMarca() {
+        return marca;
+    };
+     public void setMarca(String marca){
         this.marca = marca;
      };
+     
+      public String getModelo() {
+        return modelo;
+    }
 
-     public String setModelo(){
+
+     public void setModelo(String modelo){
         this.modelo = modelo;
      };
 
-     public int setAno(){
+      public int getAno() {
+        return ano;
+    }
+
+     public void setAno(int ano){
         this.ano = ano;
      };
 
      // Métodos getters
-    public String getMarca() {
-        return marca;
-    };
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public int getAno() {
-        return ano;
-    }
+        
     public String getCor() {
         return cor;
     }
 
     public void setCor(String cor) {
         this.cor = cor;
-    }
+    };
         // Metodo para exibir as informações basicas
     public void ExibirInformacao(){
     System.out.println("Marca = "+marca);
@@ -55,21 +71,19 @@ class Veiculo{
 }
     
     public void Ligar(String Estado){
-        public int Velocidade = 0;
-        public int Quilometragem = 0;
-        public int Combustivel_Restante;
+       
     }
     
     
      public void Acelerar(int Aceleracao){
-            if(Estado == "Ligado")
+            if(Estado.equals("Ligado"))
             {
                 if(Combustivel_Restante > 0)
                 {
-                System.out.println("")
-                public int Velocidade += Aceleracao;
-                public int Quilometragem += Aceleracao/5;
-                public int combustivel_Restante -= Aceleracao/2;
+                System.out.println("");
+                 Velocidade += Aceleracao;
+                 Quilometragem += Aceleracao/5;
+                 Combustivel_Restante -= Aceleracao/2;
                 }   
                 else{
                     System.out.println("O carro esta sem combustivel");
@@ -84,11 +98,11 @@ class Veiculo{
         
         public void Frear(int Aceleracao)
         {
-            if(Estado == "Ligado"){
+            if(Estado.equals("Ligado")){
                 while(Velocidade > 0){
-                public int Freio = 1.3f;
-                public int Velocidade -= Freio;
-                System.out.println("O carro está freiando");
+                float Freio = 1.3f;
+                Velocidade -= Freio;
+                System.out.println("O carro está freiando\nVelocidade atual: "+Velocidade+"KM/H");
                 }
             }
 
@@ -98,7 +112,7 @@ class Veiculo{
         }
         
         public void Desligar(String Estado){
-            if(Estado == "Ligado")
+            if(Estado.equals("Ligado"))
             {
                 System.out.println("O carro esta agora desligado;");
             }
